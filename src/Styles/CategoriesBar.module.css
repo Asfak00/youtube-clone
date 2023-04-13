@@ -1,0 +1,47 @@
+.CategoriesBar {
+  width: 100%;
+  display: flex;
+  padding: 0.5rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  scrollbar-width: none;
+  font-weight: 500;
+  user-select: none;
+  margin-bottom: 0rem;
+}
+
+.CategoriesBar span {
+  padding: 0.4rem 0.6rem;
+  white-space: nowrap;
+  border: 1px solid #e5e5e5fe;
+  margin-right: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.CategoriesBar span:hover {
+  background-color: #e5e5e5fe;
+}
+
+.active {
+  background-color: #000000;
+  color: #fff;
+}
+
+.homeScreenContainer {
+  width: 100%;
+  margin: auto;
+}
+
+@media screen and (max-width: 575px) {
+  .homeScreenCol {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .homeScreenCol {
+    width: 100%;
+    margin-left: 0.9rem;
+  }
+}

@@ -1,0 +1,56 @@
+nav {
+  width: 90px;
+  margin-top: 0rem;
+  padding-left: 0.4rem;
+  position: sticky;
+  top: 10vh;
+  left: 0;
+  /* display: none; */
+}
+
+nav a {
+  color: #000000e1;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #000000e1;
+}
+
+nav li {
+  list-style: none;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  padding: 0.1rem 0.3rem;
+  margin-top: 0.7rem;
+}
+
+nav li:hover {
+  background-color: #e5e5e5;
+  border-radius: 10px;
+}
+
+nav li p {
+  font-size: 0.6rem;
+}
+
+nav ul {
+  padding-left: 0rem;
+}
+
+hr {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.open {
+  transform: translateX(0%);
+}
+
+@media screen and (max-width: 390px) {
+  nav {
+    display: none;
+  }
+}

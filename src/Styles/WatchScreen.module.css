@@ -1,0 +1,29 @@
+.watchScreen_player {
+  width: 100%;
+  height: 60vh;
+  background-color: rgb(97, 97, 97);
+  margin: 1.5rem 0 0.4rem 0.7rem;
+  object-fit: contain;
+}
+
+.VideoHorizontal {
+  padding-top: 1.7rem;
+}
+
+@media screen and (max-width: 767px) {
+  .watchScreen_player {
+    height: 67vh;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .watchScreen_player {
+    height: 40vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  .watchScreen_player {
+    height: 35vh;
+  }
+}

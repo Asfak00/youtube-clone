@@ -1,0 +1,267 @@
+.header {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  background-color: #ffff;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  padding: 2rem 1rem;
+}
+
+.menuIcon img {
+  width: 90px;
+  margin-left: 1.3rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.searchBar {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.searchBar form {
+  width: 100%;
+  position: relative;
+}
+
+.searchBar input {
+  width: 75%;
+  padding: 0.4rem 0 0.4rem 1rem;
+  border: 1px solid #aba9a9;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid #aba9a9;
+}
+
+.CrossIconOnSearchBar {
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  right: 25%;
+  top: 10%;
+  padding: 0.4rem;
+  color: #000;
+  font-weight: 500;
+  visibility: hidden;
+}
+
+.CrossIconOnSearchBar:hover {
+  border-radius: 50%;
+  background-color: #e5e5e5;
+}
+
+.CrossIconOnSearchBar_Visible {
+  visibility: visible;
+}
+
+.menu_icon {
+  display: none;
+}
+
+.secondBar {
+  padding: 0.6rem;
+  color: #000000f8;
+  cursor: pointer;
+}
+
+.searchBar input:focus {
+  outline: none;
+  border-color: #4880c5;
+}
+
+.searchBar button {
+  width: 60px;
+  height: 40px;
+  border: 1px solid #aba9a9;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.searchBar button:hover {
+  background-color: #e5e5e56e;
+  color: #000;
+}
+
+.searchBar .MicrophoneIcon {
+  width: 37px;
+  padding: 0.6rem;
+  height: 37px;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.MicrophoneIcon:hover .micro_hoverText {
+  visibility: visible;
+}
+
+.icon {
+  padding: 0.6rem;
+
+  margin-right: 0.5rem;
+}
+
+.avatar {
+  cursor: pointer;
+}
+
+.avatar img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.searchBar .MicrophoneIcon:hover,
+.secondBar:hover,
+.icon:hover {
+  background-color: #e5e5e5;
+  color: #000;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 850px) {
+  .searchBar {
+    width: 50%;
+  }
+
+  .searchBar form {
+    width: 100%;
+  }
+
+  .searchBar input {
+    width: 70%;
+  }
+
+  .CrossIconOnSearchBar {
+    width: 33px;
+    height: 33px;
+    right: 30%;
+    top: 10%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .header {
+    padding: 2rem;
+  }
+
+  .menuIcon img {
+    display: none;
+  }
+
+  .searchBar {
+    width: 70%;
+  }
+
+  .searchBar input {
+    width: 80%;
+  }
+
+  .CrossIconOnSearchBar {
+    right: 20%;
+  }
+
+  .menu_icon {
+    display: inline;
+    width: 30px;
+  }
+
+  .secondBar {
+    display: none;
+  }
+
+  .searchBar .MicrophoneIcon {
+    display: none;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .avatar img {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .searchBar {
+    width: 70%;
+  }
+
+  .searchBar input {
+    width: 80%;
+  }
+
+  .searchBar button {
+    width: 40px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .header {
+    padding: 0.9rem;
+  }
+
+  .menuIcon img {
+    display: none;
+  }
+
+  .searchBar {
+    width: 70%;
+  }
+
+  .searchBar form {
+    margin: 0 auto;
+  }
+
+  .searchBar input {
+    width: 80%;
+    padding: 0.3rem;
+    padding-left: 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .CrossIconOnSearchBar {
+    width: 28px;
+    height: 28px;
+    right: 15%;
+    top: 8%;
+  }
+
+  .searchBar button {
+    width: 40px;
+    height: 31px;
+  }
+
+  .searchBar .MicrophoneIcon {
+    display: none;
+  }
+
+  .menu_icon {
+    display: block;
+    width: 21px;
+  }
+
+  .secondBar {
+    display: none;
+  }
+
+  .searchIcon {
+    width: 17px;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .avatar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}

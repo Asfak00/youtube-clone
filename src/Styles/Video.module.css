@@ -1,0 +1,54 @@
+.thumbnail {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.video_top {
+  position: relative;
+}
+
+.video_info {
+  display: flex;
+}
+
+.lazy-load-image-background {
+  width: 100%;
+}
+
+.timezone {
+  position: absolute;
+  bottom: 1.1rem;
+  right: 0.4rem;
+  background-color: #000000cd;
+  padding: 0.1rem 0.2rem;
+  border-radius: 3px;
+  font-size: 0.6rem;
+  color: #fff;
+}
+
+.video_avatar {
+  width: 35x;
+  height: 35px;
+  border-radius: 20px;
+  margin-right: 0.7rem;
+}
+
+.video_details {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.video_title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.video_details p {
+  margin: 0;
+  font-size: 0.8rem;
+}

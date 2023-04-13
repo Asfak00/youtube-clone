@@ -1,0 +1,43 @@
+.NotFound_container {
+  width: 100%;
+  height: 100vh;
+}
+
+.error_container {
+  width: 80%;
+  padding: 1rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.error_container img {
+  width: 300px;
+  display: block;
+  margin: auto;
+}
+
+.error_container h1 {
+  font-size: 5rem;
+}
+
+.error_container p {
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 400px) {
+  .error_container {
+    width: 100%;
+  }
+
+  .error_container img {
+    width: 200px;
+  }
+
+  .error_container h1 {
+    font-size: 4rem;
+  }
+
+  .error_container p {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,13 @@
+.no_internet_container {
+  width: 100%;
+  text-align: center;
+}
+
+.no_internet_container img {
+  width: 60%;
+}
+
+.no_internet_container h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

@@ -1,0 +1,135 @@
+.yt_app {
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 15px 15px 0px #9f9e9e46;
+  position: fixed;
+  padding-left: 1rem;
+  scrollbar-width: none;
+  top: 10%;
+  z-index: 999;
+  padding-top: 1.5rem;
+  padding-bottom: 5rem;
+  user-select: none;
+}
+
+.yt_app li {
+  width: 200px;
+  font-size: 20px;
+  text-align: justify;
+  padding: 0.3rem 0;
+  padding-left: 1rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+.yt_app li:hover {
+  background-color: #e1e1e17e;
+  color: #000;
+  border-radius: 5px;
+}
+
+.yt_app ul {
+  padding-left: 0rem;
+}
+
+.yt_app ul a {
+  color: #000000d9;
+  text-decoration: none;
+}
+
+.yt_app ul a:hover {
+  color: #000;
+}
+
+.yt_app li span {
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.navLogo {
+  width: 90px;
+  margin-left: 1rem;
+}
+
+.img {
+  width: 30px;
+}
+
+.img_big {
+  width: 25px;
+}
+
+.channels {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.yt_app p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(7, 7, 7, 0.838);
+}
+
+.terms {
+  margin-top: 0.7rem;
+}
+
+.copyright p {
+  font-size: 0.8rem;
+  color: #727272;
+  margin-top: 1rem;
+}
+
+.yt_app h5 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #000;
+}
+
+.open {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .yt_app {
+    width: 300px;
+    top: 9%;
+  }
+
+  .yt_app li {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .yt_app {
+    width: 200px;
+    height: 100vh;
+    top: 10%;
+  }
+
+  .yt_app li {
+    font-size: 15px;
+    padding-left: 0rem;
+  }
+
+  .img {
+    width: 23px;
+  }
+
+  .img_big {
+    width: 19px;
+  }
+
+  .channels {
+    width: 23px;
+    height: 23px;
+  }
+}

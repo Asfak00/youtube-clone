@@ -1,0 +1,413 @@
+.videoMetaData {
+  user-select: none;
+  margin-left: 0.7rem;
+}
+
+.videoMetaData_channel img {
+  width: 45px;
+}
+
+.channel_desc {
+  margin-left: 0.7rem;
+}
+
+.channel_details_left,
+.channel_details_right {
+  width: 50%;
+}
+
+.like {
+  margin-right: 0.3rem;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.l-r {
+  padding: 0.5rem 0.4rem;
+  border-left: 1px solid rgb(153, 153, 153);
+  background-color: #bababa75;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  cursor: pointer;
+}
+
+.l-f {
+  padding: 0.5rem 0.6rem;
+  background-color: #bababa75;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  cursor: pointer;
+}
+
+.l-r:hover {
+  background-color: #bababacf;
+}
+
+.l-f:hover {
+  background-color: #bababacf;
+}
+
+.channel_desc .channel-name {
+  color: #000000;
+  font-weight: 600;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.channel_desc .subscribers {
+  font-size: 0.8rem;
+  color: #000000a9;
+}
+
+.subscribe-btn {
+  width: 35%;
+  font-weight: 600;
+  letter-spacing: 1;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  border-radius: 40px;
+}
+
+.subscribe-btn:hover {
+  background-color: #000000d7;
+}
+
+.videoMetaData_description {
+  background-color: #eae9e9af;
+  padding: 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+}
+
+.showMoreText {
+  display: block;
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+
+.videoMetaData_description:hover {
+  background-color: #eae9e9;
+}
+
+.publishDate {
+  color: #000000;
+  font-weight: 500;
+}
+
+.VideoMetaData_top span {
+  cursor: pointer;
+}
+
+.share {
+  border-radius: 40px;
+  padding: 0.4rem 0.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  background-color: #bababa75;
+  position: relative;
+}
+
+.share:hover {
+  background-color: #bababacf;
+}
+
+.three-dots {
+  width: 40px;
+  height: 40px;
+  margin-left: 1rem;
+  align-items: center;
+  padding: 0.4rem 0.5rem;
+  border-radius: 50%;
+  background-color: #bababa75;
+  cursor: pointer;
+  position: relative;
+}
+
+.shareText {
+  margin-left: 0.3rem;
+}
+
+.three-dots:hover {
+  background-color: #bababacf;
+}
+
+/* hidden menu of three dots */
+.hidden_menu_three_dots {
+  width: 200px;
+  position: absolute;
+  right: 15%;
+  bottom: 13%;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 0px rgb(0, 0, 0);
+  z-index: 999;
+  border-radius: 15px;
+  padding: 0.5rem 0;
+  visibility: hidden;
+  transition: all 0.1s ease-in-out;
+}
+
+.hidden_menu_three_dots p {
+  width: 100%;
+  padding: 0.4rem 1.4rem;
+  margin: 0;
+  border-radius: 5px;
+}
+
+.hidden_menu_three_dots p:hover {
+  background-color: #eae9e9;
+}
+
+.hidden_menu_three_dots span {
+  margin-left: 0.9rem;
+}
+
+.visible {
+  visibility: visible;
+}
+
+/* share div */
+.share_div {
+  width: 50%;
+  height: auto;
+  left: 20%;
+  box-shadow: 0px 0px 5px 0px rgb(0, 0, 0);
+  bottom: 20%;
+  padding: 0.5rem 1rem;
+  display: none;
+  background-color: #ffff;
+  position: absolute;
+  border-radius: 14px;
+}
+
+.btn-gray {
+  background-color: gray;
+}
+
+.share_div .link {
+  border-top: 1px solid #b9b7b7af;
+  border-bottom: 1px solid #b9b7b7b0;
+}
+
+.share_div .link span {
+  padding: 0.7rem;
+  border-radius: 50%;
+
+  margin-right: 0.5rem;
+}
+
+.share_div .link .videoLinkDiv {
+  margin: 2rem 0;
+  padding: 0.5rem 0.5rem;
+  border-radius: 15px;
+  display: flex;
+  border: 1px solid gray;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.CrossIconDiv {
+  width: 100%;
+  text-align: right;
+}
+
+.CrossIcon {
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.CrossIcon:hover {
+  background-color: #eae9e9;
+}
+
+.videoLink {
+  margin: 0;
+  user-select: none;
+  color: #9b9a9a;
+}
+
+.copyBtn {
+  border: none;
+  outline: none;
+  padding: 0.4rem 1rem;
+  background-color: #1f62f3;
+  color: #ffff;
+  border-radius: 10px;
+}
+
+.clicked {
+  background-color: rgba(128, 128, 128, 0.576);
+  color: rgb(62, 62, 62);
+}
+
+.closeShareDiv {
+  display: none;
+}
+
+.openShareDiv {
+  display: block;
+}
+
+/* all social link */
+.share_icon {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 860px) {
+  .share {
+    padding: 0.3rem 0.3rem;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+  }
+
+  .three-dots {
+    width: 35px;
+    height: 35px;
+    margin-left: 0.5rem;
+    padding: 0.3rem 0.4rem;
+  }
+
+  .l-r {
+    padding: 0.3rem 0.3rem;
+  }
+
+  .l-f {
+    padding: 0.3rem 0.4rem;
+  }
+
+  .share_div {
+    bottom: 1%;
+    padding: 0.5rem 1rem;
+  }
+  .share_social_icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .share {
+    padding: 0.4rem 0.5rem;
+    margin-left: 1rem;
+  }
+
+  .share_div {
+    left: 40%;
+    bottom: 10%;
+  }
+
+  .share_icon {
+    margin-bottom: 0;
+  }
+
+  .share_social_icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .l-r {
+    padding: 0.5rem 0.4rem;
+  }
+
+  .l-f {
+    padding: 0.5rem 0.6rem;
+  }
+
+  .three-dots {
+    width: 40px;
+    height: 40px;
+    margin-left: 1rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .hidden_menu_three_dots {
+    right: 3%;
+    bottom: 15%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .videoMetaData_channel {
+    height: 17vh;
+    flex-direction: column;
+  }
+  .channel_details_left {
+    width: 100%;
+  }
+
+  .channel_details_right {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .share {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+  }
+
+  .share_div {
+    width: 370px;
+    z-index: 999;
+    left: 10%;
+    bottom: 10%;
+  }
+
+  .three-dots {
+    width: 35px;
+    height: 35px;
+    margin-left: 0.5rem;
+    padding: 0.3rem 0.4rem;
+  }
+
+  .share_icon {
+    margin-bottom: 0;
+  }
+
+  .share_social_icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .l-r {
+    padding: 0.5rem 0.4rem;
+  }
+
+  .l-f {
+    padding: 0.5rem 0.6rem;
+  }
+  .hidden_menu_three_dots {
+    right: 3%;
+    bottom: 30%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .share_div {
+    width: 95%;
+    left: 3%;
+    bottom: 15%;
+  }
+
+  .hidden_menu_three_dots {
+    right: 3%;
+    bottom: 25%;
+  }
+
+  .share_div .link .videoLinkDiv {
+    padding: 0.3rem 0.3rem;
+  }
+
+  .copyBtn {
+    padding: 0.3rem 1rem;
+    font-size: 0.7rem;
+  }
+}
