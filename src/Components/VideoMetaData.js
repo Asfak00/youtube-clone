@@ -21,6 +21,7 @@ import {
 } from "../Redux/Channel.action";
 import CustomHelmet from "./CustomHelmet";
 import NoInternet from "./NoInternet";
+import { useHistory } from "react-router-dom";
 
 function VideoMetaData({ video: { snippet, statistics }, videoId }) {
   // get all real data in the redux store
@@ -57,102 +58,108 @@ function VideoMetaData({ video: { snippet, statistics }, videoId }) {
     shareIcon.classList.remove("closeShareDiv");
   };
 
+  // handling channel page when use click channel icon
+  const history = useHistory();
+  const handleChannelPage = () => {
+    history.push(`/channel/${channelId}`);
+  };
+
   return (
     <>
-      {
-        (snippet = null ? (
-          <NoInternet />
-        ) : (
-          <div className="videoMetaData py-1">
-            <div className="VideoMetaData_top">
-              <h4>{title}</h4>
-            </div>
+      {snippet === null ? (
+        <NoInternet />
+      ) : (
+        <div className="videoMetaData py-1">
+          <div className="VideoMetaData_top">
+            <h4>{title}</h4>
+          </div>
 
-            {/* add helmet component */}
-            <CustomHelmet title={title} description={description} />
+          {/* add helmet component */}
+          <CustomHelmet title={title} description={description} />
 
-            {/* channel */}
+          {/* channel */}
 
-            <div className="videoMetaData_channel d-flex justify-content-between align-items-center ">
-              <div className="channel_details_left d-flex justify-content-between align-items-center ">
-                <div className="d-flex justify-content-between align-items-center py-1">
-                  <img
-                    src={channelSnippet?.thumbnails?.default?.url}
-                    alt=""
-                    className="rounded-circle my-2"
-                  />
-                  <div className="channel_desc d-flex flex-column">
-                    <span className="channel-name">{channelTitle}</span>
-                    <span className="subscribers">
-                      {" "}
-                      {numeral(channelStatistics?.subscriberCount).format(
-                        "O.a"
-                      )}{" "}
-                      subscribers
-                    </span>
-                  </div>
-                </div>
-                <button
-                  className={`subscribe-btn p-2 m-2 border-0 ${
-                    channelSubscription && "btn-gray"
-                  }`}>
-                  {channelSubscription ? "Subscribed" : "Subscribe"}
-                </button>
-              </div>
-
-              {/* others icons */}
-
-              <div className="channel_details_right d-flex align-items-center justify-content-end">
-                <div className="like-div">
-                  <span className="l-f">
-                    <MdThumbUpOffAlt size={22} className="like" />
-                    {numeral(likeCount).format("O.a")}
-                  </span>
-
-                  <span className="l-r">
-                    <MdThumbDownOffAlt size={22} />
+          <div className="videoMetaData_channel d-flex justify-content-between align-items-center ">
+            <div className="channel_details_left d-flex justify-content-between align-items-center ">
+              <div
+                className="d-flex goChannelPage  justify-content-between align-items-center py-1"
+                onClick={handleChannelPage}>
+                <img
+                  src={channelSnippet?.thumbnails?.default?.url}
+                  alt=""
+                  className="rounded-circle my-2"
+                />
+                <div className="channel_desc d-flex flex-column">
+                  <span className="channel-name">{channelTitle}</span>
+                  <span className="subscribers">
+                    {" "}
+                    {numeral(channelStatistics?.subscriberCount).format(
+                      "O.a"
+                    )}{" "}
+                    subscribers
                   </span>
                 </div>
-
-                {/* share icon */}
-                <span className="share" onClick={handleShareOption}>
-                  <RiShareForwardLine size={22} className="like" />
-                  <span className="shareText">Share</span>
-                </span>
-                <ShareDiv />
-
-                {/* three dots menu icon */}
-                <span className="three-dots">
-                  <BsThreeDots
-                    size={22}
-                    className="like"
-                    onClick={handleThreeDots}
-                  />
-                </span>
-                <ThreeDotsMenu />
               </div>
+              <button
+                className={`subscribe-btn p-2 m-2 border-0 ${
+                  channelSubscription && "btn-gray"
+                }`}>
+                {channelSubscription ? "Subscribed" : "Subscribe"}
+              </button>
             </div>
 
-            {/* description */}
+            {/* others icons */}
 
-            <div className="videoMetaData_description">
-              <span className="publishDate">
-                {numeral(viewCount).format("O.a")} views{" "}
-                {moment(publishedAt).fromNow()}
+            <div className="channel_details_right d-flex align-items-center justify-content-end">
+              <div className="like-div">
+                <span className="l-f" title="like">
+                  <MdThumbUpOffAlt size={22} className="like" />
+                  {numeral(likeCount).format("O.a")}
+                </span>
+
+                <span className="l-r" title="dislike">
+                  <MdThumbDownOffAlt size={22} />
+                </span>
+              </div>
+
+              {/* share icon */}
+              <span className="share" onClick={handleShareOption} title="Share">
+                <RiShareForwardLine size={22} className="like" />
+                <span className="shareText">Share</span>
               </span>
-              <br />
-              <ShowMoreText
-                lines={2}
-                show="Show more"
-                less="Show less"
-                anchorClass="showMoreText"
-                expanded={false}>
-                {description}
-              </ShowMoreText>
+              <ShareDiv />
+
+              {/* three dots menu icon */}
+              <span className="three-dots" title="menu">
+                <BsThreeDots
+                  size={22}
+                  className="like"
+                  onClick={handleThreeDots}
+                />
+              </span>
+              <ThreeDotsMenu />
             </div>
           </div>
-        ))
-      }
+
+          {/* description */}
+
+          <div className="videoMetaData_description">
+            <span className="publishDate">
+              {numeral(viewCount).format("O.a")} views{" "}
+              {moment(publishedAt).fromNow()}
+            </span>
+            <br />
+            <ShowMoreText
+              lines={2}
+              show="Show more"
+              less="Show less"
+              anchorClass="showMoreText"
+              expanded={false}>
+              {description}
+            </ShowMoreText>
+          </div>
+        </div>
+      )}
     </>
   );
 }

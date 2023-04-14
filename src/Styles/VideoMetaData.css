@@ -11,6 +11,10 @@
   margin-left: 0.7rem;
 }
 
+.goChannelPage {
+  cursor: pointer;
+}
+
 .channel_details_left,
 .channel_details_right {
   width: 50%;
@@ -337,7 +341,7 @@
 
 @media screen and (max-width: 570px) {
   .videoMetaData_channel {
-    height: 17vh;
+    height: 25vh;
     flex-direction: column;
   }
   .channel_details_left {

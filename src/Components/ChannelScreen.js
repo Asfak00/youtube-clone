@@ -25,11 +25,6 @@ function ChannelScreen() {
 
   const { snippet, statistics } = channel;
 
-  console.log(snippet?.title);
-  console.log(statistics?.subscriberCount);
-
-  console.log(channel);
-
   return (
     <>
       <div className="p-1 mt-3 my-2 d-flex justify-content-between align-items-center channelHeader">

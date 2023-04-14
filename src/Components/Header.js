@@ -104,7 +104,7 @@ const Header = ({ handleToggleMenu }) => {
           className={Classes.icon}
           title="notification"
         />
-        <img src={photoUrl} alt="avatar" title="account" />
+        <img src={photoUrl} alt="" title="account" />
       </section>
     </div>
   );
