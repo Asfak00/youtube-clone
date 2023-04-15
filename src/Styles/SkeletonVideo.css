@@ -6,6 +6,10 @@
   flex-wrap: wrap;
 }
 
+:root {
+  --animation: skeleton_loading_effect 1s infinite alternate;
+}
+
 .skeleton_box {
   width: 100%;
   height: 23vh;
@@ -13,7 +17,7 @@
   margin: 0.5rem;
   margin-bottom: 7rem;
   background-color: #f1f1f1;
-  animation: skeleton_loading_effect 1s infinite alternate;
+  animation: var(--animation);
 }
 
 .skeleton_channel_icon {
@@ -22,7 +26,7 @@
   border-radius: 50%;
   margin-top: 10rem;
   background-color: #f1f1f1;
-  animation: skeleton_loading_effect 1s infinite alternate;
+  animation: var(--animation);
 }
 
 .skeleton_channel_name {
@@ -30,7 +34,7 @@
   height: 20px;
   background-color: #f1f1f1;
   margin-top: 10rem;
-  animation: skeleton_loading_effect 1s infinite alternate;
+  animation: var(--animation);
 }
 
 .skeleton_views {
@@ -38,9 +42,8 @@
   float: right;
   height: 20px;
   background-color: #f1f1f1;
-  animation: skeleton_loading_effect 1s infinite alternate;
+  animation: var(--animation);
 }
-
 @keyframes skeleton_loading_effect {
   0% {
     background-color: hsla(0, 0%, 0%, 0.249);

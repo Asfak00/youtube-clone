@@ -1,4 +1,12 @@
-.thumbnail {
+.Video {
+  width: 100%;
+}
+
+.video_top {
+  position: relative;
+}
+
+.video_top img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 0.8rem;
@@ -6,16 +14,8 @@
   cursor: pointer;
 }
 
-.video_top {
-  position: relative;
-}
-
 .video_info {
   display: flex;
-}
-
-.lazy-load-image-background {
-  width: 100%;
 }
 
 .timezone {

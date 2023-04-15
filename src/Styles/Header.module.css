@@ -27,22 +27,14 @@
 .searchBar form {
   width: 100%;
   position: relative;
-}
-
-.searchBar input {
-  width: 75%;
-  padding: 0.4rem 0 0.4rem 1rem;
-  border: 1px solid #aba9a9;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border: 1px solid #aba9a9;
+  display: flex;
 }
 
 .CrossIconOnSearchBar {
   width: 33px;
   height: 33px;
   position: absolute;
-  right: 25%;
+  right: 15%;
   top: 10%;
   padding: 0.4rem;
   color: #000;
@@ -69,14 +61,22 @@
   cursor: pointer;
 }
 
+.searchBar input {
+  width: 100%;
+  padding: 0.5rem 0 0.4rem 1rem;
+  border: 1px solid #aba9a9;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid #aba9a9;
+}
+
 .searchBar input:focus {
   outline: none;
   border-color: #4880c5;
 }
 
 .searchBar button {
-  width: 60px;
-  height: 40px;
+  padding: 0 1rem;
   border: 1px solid #aba9a9;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -200,8 +200,8 @@
     width: 80%;
   }
 
-  .searchBar button {
-    width: 40px;
+  .CrossIconOnSearchBar {
+    right: 20%;
   }
 }
 @media screen and (max-width: 390px) {
@@ -229,15 +229,9 @@
   }
 
   .CrossIconOnSearchBar {
-    width: 28px;
-    height: 28px;
-    right: 15%;
-    top: 8%;
-  }
-
-  .searchBar button {
-    width: 40px;
-    height: 31px;
+    width: 30px;
+    right: 24%;
+    top: 2%;
   }
 
   .searchBar .MicrophoneIcon {

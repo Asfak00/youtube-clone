@@ -90,12 +90,13 @@ const Header = ({ handleToggleMenu }) => {
           <button type="submit" title="search">
             <IoSearchOutline size="23" className={Classes.searchIcon} />
           </button>
-          <FaMicrophone
-            className={Classes.MicrophoneIcon}
-            size="30"
-            title="search your voice"
-          />
         </form>
+
+        <FaMicrophone
+          className={Classes.MicrophoneIcon}
+          size="30"
+          title="search your voice"
+        />
       </section>
       <section className={Classes.avatar}>
         <BiVideoPlus size="42" className={Classes.icon} title="create video" />

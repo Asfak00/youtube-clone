@@ -17,7 +17,7 @@ export const getCommentsOfVideoById = (id) => async (dispatch) => {
     const { data } = await request("/commentThreads", {
       params: {
         part: "snippet",
-        maxResults: 100,
+        maxResults: 20,
         videoId: id,
       },
     });

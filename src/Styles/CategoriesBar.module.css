@@ -33,6 +33,10 @@
   margin: auto;
 }
 
+.infiniteScroll {
+  scrollbar-width: none;
+}
+
 @media screen and (max-width: 575px) {
   .homeScreenCol {
     width: 65%;
@@ -42,6 +46,5 @@
 @media screen and (max-width: 390px) {
   .homeScreenCol {
     width: 100%;
-    margin-left: 0.9rem;
   }
 }

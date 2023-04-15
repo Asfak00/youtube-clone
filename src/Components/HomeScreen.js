@@ -10,11 +10,7 @@ import Video from "./Video";
 // css module for styling
 import Classes from "../Styles/CategoriesBar.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  getPopularVideos,
-  getVideoCategory,
-  getVideosByCategory,
-} from "../Redux/Video.action";
+import { getPopularVideos, getVideosByCategory } from "../Redux/Video.action";
 import SkeletonVideo from "./SkeletonVideo";
 
 function HomeScreen() {
@@ -45,7 +41,8 @@ function HomeScreen() {
         hasMore={true}
         loader={
           <div className="spinner-border d-block text-danger mx-auto"></div>
-        }>
+        }
+        className={Classes.infiniteScroll}>
         <Row className={Classes.homeScreenContainer}>
           {!loading
             ? videos.map((video, i) => (

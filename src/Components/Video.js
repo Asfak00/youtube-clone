@@ -74,11 +74,7 @@ function Video({ video, channelScreen }) {
   return (
     <div className={Classes.Video} onClick={handleVideoClick}>
       <div className={Classes.video_top}>
-        <LazyLoadImage
-          src={medium.url}
-          effect="blur"
-          className={Classes.thumbnail}
-        />
+        <img src={medium.url} alt="thumbnail" className={Classes.thumbnail} />
         <span className={Classes.timezone}>{_duration}</span>
       </div>
       <div className={Classes.video_info}>
